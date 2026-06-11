@@ -32,17 +32,24 @@ UNIR_TFM_HAM10000/
 ├── README.md                        # Este archivo
 ├── requirements.txt                 # Dependencias Python
 ├── .gitignore                       # Archivos excluidos del repositorio
+├── LICENSE                          # Licencia MIT del código fuente
 │
-├── data/                            # Directorio de datos (no incluido en Git)
-│   ├── .gitkeep                     # Marcador para mantener el directorio
+├── data/                            # Directorio de datos (NO incluido en Git)
 │   └── README_data.md               # Instrucciones para descargar los datos
 │
-├── src/                             # Código fuente principal
-│   └── eda_ham10000_v1.py           # Script EDA completo
+├── notebooks/                       # Cuadernos Jupyter de exploración
+│   ├── TFM_EDA_SVM.ipynb            # EDA + modelo SVM
+│   ├── TFM_1.ipynb                  # Notebook principal v1
+│   ├── TFM_1_v2.ipynb               # Notebook principal v2
+│   ├── TFM_1_v3.ipynb               # Notebook principal v3
+│   └── TFM_1_v4.ipynb               # Notebook principal v4
 │
-└── outputs/                         # Resultados generados por los scripts
-    ├── figures/                     # Gráficos PNG generados
-    ├── excel/                       # Resultados en Excel
+├── src/                             # Scripts Python reproducibles
+│   └── eda_ham10000_v1.py           # Script EDA completo (producción)
+│
+└── outputs/                         # Resultados generados
+    ├── figures/                     # 10 gráficos PNG del EDA
+    ├── excel/                       # Resultados estadísticos (12 hojas)
     └── reports/                     # Informes Word generados
 ```
 
