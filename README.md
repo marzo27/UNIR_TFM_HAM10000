@@ -45,12 +45,15 @@ UNIR_TFM_HAM10000/
 │   └── TFM_1_v4.ipynb               # Notebook principal v4
 │
 ├── src/                             # Scripts Python reproducibles
-│   └── eda_ham10000_v1.py           # Script EDA completo (producción)
+│   ├── eda_ham10000_v1.py           # Script EDA completo (producción)
+│   ├── generar_dataset_balanceado.py # Generación del dataset balanceado (1.954 malignas / 1.954 benignas)
+│   ├── svm_ham10000_v1.py           # SVM sobre el dataset original (desbalanceado)
+│   └── svm_ham10000_balanceado.py   # SVM sobre el dataset balanceado
 │
 └── outputs/                         # Resultados generados
-    ├── figures/                     # 10 gráficos PNG del EDA
-    ├── excel/                       # Resultados estadísticos (12 hojas)
-    └── reports/                     # Informes Word generados
+    ├── EDA/                         # 10 gráficos PNG + Excel (resultados EDA) + salida de consola
+    ├── SVM/                         # Métricas, modelo (.joblib) y 8 gráficos del SVM baseline
+    └── SVM_Balanceado/              # Métricas, modelo (.joblib) y 8 gráficos del SVM balanceado
 ```
 
 ---
