@@ -1,4 +1,4 @@
-# TFM — Clasificación automática de enfermedades dermatológicas mediante IA
+# TFM — Evaluación comparativa de SVM y DenseNet201 para la clasificación automática de enfermedades dermatológicas
 ### Máster en Análisis y Visualización de Datos Masivos — UNIR
 
 ---
