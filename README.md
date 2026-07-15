@@ -28,35 +28,91 @@ Los datos utilizados en este proyecto son el dataset público **HAM10000 (Human 
 
 ```
 UNIR_TFM_HAM10000/
-│
-├── README.md                        # Este archivo
-├── requirements.txt                 # Dependencias Python
-├── .gitignore                       # Archivos excluidos del repositorio
-├── LICENSE                          # Licencia MIT del código fuente
-│
-├── data/                            # Directorio de datos (NO incluido en Git)
-│   └── README_data.md               # Instrucciones para descargar los datos
-│
-├── notebooks/                       # Cuadernos Jupyter de exploración
-│   ├── TFM_EDA_SVM.ipynb            # EDA + modelo SVM
-│   ├── TFM_1.ipynb                  # Notebook principal v1
-│   ├── TFM_1_v2.ipynb               # Notebook principal v2
-│   ├── TFM_1_v3.ipynb               # Notebook principal v3
-│   └── TFM_1_v4.ipynb               # Notebook principal v4
-│
-├── src/                             # Scripts Python reproducibles
-│   ├── eda_ham10000_v1.py           # Script EDA completo (producción)
-│   ├── generar_dataset_balanceado.py # Generación del dataset balanceado (1.954 malignas / 1.954 benignas)
-│   ├── svm_ham10000_v1.py           # SVM sobre el dataset original (desbalanceado)
-│   └── svm_ham10000_balanceado.py   # SVM sobre el dataset balanceado
-│
-└── outputs/                         # Resultados generados
-    ├── EDA/                         # 10 gráficos PNG + Excel (resultados EDA) + salida de consola
-    ├── SVM/                         # Métricas, modelo (.joblib) y 8 gráficos del SVM baseline
-    └── SVM_Balanceado/              # Métricas, modelo (.joblib) y 8 gráficos del SVM balanceado
+├── data/
+│   └── README_data.md
+├── notebooks/
+│   ├── TFM_1.ipynb
+│   ├── TFM_1_v2.ipynb
+│   ├── TFM_1_v3.ipynb
+│   ├── TFM_1_v4.ipynb
+│   ├── TFM_DenseNet201_Escenario1_Colab.ipynb
+│   └── TFM_EDA_SVM.ipynb
+├── outputs/
+│   ├── DenseNet/
+│   │   ├── Figure_1.png
+│   │   ├── Figure_2.png
+│   │   ├── Figure_3.png
+│   │   ├── Figure_4.png
+│   │   ├── Figure_5.png
+│   │   ├── Figure_6.png
+│   │   ├── Figure_7.png
+│   │   ├── metricas_densenet201.json
+│   │   └── Resultados.txt
+│   ├── DenseNet_Balanceado/
+│   │   ├── Figure_1.png
+│   │   ├── Figure_2.png
+│   │   ├── Figure_3.png
+│   │   ├── Figure_4.png
+│   │   ├── Figure_5.png
+│   │   ├── Figure_6.png
+│   │   ├── Figure_7.png
+│   │   ├── metricas_densenet201.json
+│   │   └── Resultados.txt
+│   ├── EDA/
+│   │   ├── eda_ham10000_v1_salida.txt
+│   │   ├── eda_resultados_HAM10000.xlsx
+│   │   ├── fig01_distribucion_clases.png
+│   │   ├── fig02_distribucion_edad.png
+│   │   ├── fig03_distribucion_sexo.png
+│   │   ├── fig04_localizacion.png
+│   │   ├── fig05_dx_type.png
+│   │   ├── fig06_malignidad_edad.png
+│   │   ├── fig07_grupos_edad_dx.png
+│   │   ├── fig08_correlacion_cramers_v.png
+│   │   ├── fig09_imagenes_por_lesion.png
+│   │   └── fig10_sexo_localizacion_apilado.png
+│   ├── SVM/
+│   │   ├── plots_svm/
+│   │   │   ├── 01_distribucion_clases.png
+│   │   │   ├── 02_analisis_pca.png
+│   │   │   ├── 03_matriz_confusion.png
+│   │   │   ├── 04_curvas_roc.png
+│   │   │   ├── 05_precision_recall.png
+│   │   │   ├── 06_metricas_por_clase.png
+│   │   │   ├── 07_validacion_cruzada.png
+│   │   │   └── 08_radar_metricas.png
+│   │   ├── metricas.xlsx
+│   │   ├── metricas_baseline.json
+│   │   ├── svm_ham10000_v1_salida.txt
+│   │   └── svm_model.joblib
+│   └── SVM_Balanceado/
+│       ├── plots_svm_balanceado/
+│       │   ├── 01_distribucion_clases.png
+│       │   ├── 02_analisis_pca.png
+│       │   ├── 03_matriz_confusion.png
+│       │   ├── 04_curvas_roc.png
+│       │   ├── 05_precision_recall.png
+│       │   ├── 06_metricas_por_clase.png
+│       │   ├── 07_validacion_cruzada.png
+│       │   └── 08_radar_metricas.png
+│       ├── metricas_balanceado.json
+│       ├── metricas_balanceado.xlsx
+│       ├── svm_ham10000_balanceado_salida.txt
+│       └── svm_model_balanceado.joblib
+├── src/
+│   ├── densenet201_ham10000.py
+│   ├── densenet201_ham10000_balanceado.py
+│   ├── eda_ham10000.py
+│   ├── eda_ham10000_v1.py
+│   ├── generar_dataset_balanceado.py
+│   ├── svm_ham10000.py
+│   ├── svm_ham10000_balanceado.py
+│   └── svm_ham10000_v1.py
+├── actualizar_estructura_readme.py
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
-
----
 
 ## Reproducción del entorno de datos
 
